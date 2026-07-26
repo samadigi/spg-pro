@@ -2,19 +2,28 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Mencegah zoom otomatis dan menyesuaikan poni layar (notch) -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
   <title>SALES PRO</title> 
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden; /* Biar ga ada scrollbar */
-      background-color: #0f172a; /* Warna background gelap senada dengan aplikasi */
+      width: 100%;
+      height: 100vh; /* Fallback browser lama */
+      height: 100dvh; /* SOLUSI UTAMA: Dynamic Viewport Height */
+      overflow: hidden; 
+      background-color: #0f172a; 
     }
     iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
       border: none;
-      width: 100vw;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
       display: block;
     }
   </style>
@@ -23,7 +32,6 @@
 
   <iframe 
    src="https://script.google.com/macros/s/AKfycbwEKlukA74BU5MC94f47GJEkCxzIT-KWHU0b87MNHu-Vbm8GQiv2lgbLy9H2_GlzSM0lg/exec" 
-   style="width: 100vw; height: 100vh; border: none;" 
    allow="geolocation; camera; microphone">
   </iframe>
 
